@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style>
+			.container {
+				padding: 50px 10% 20px 10%;
+				font-family: 'Raleway', sans-serif;
+			}
+
+			.gallery {
+			  display: grid;
+			  grid-gap: 15px;
+			  grid-template-columns: repeat(auto-fit, 300px);
+			  grid-auto-rows: 300px;
+			  grid-auto-flow: dense;
+			}
+
+			.wide {
+			  grid-column: span 2;
+			}
+
+			.tall {
+			  grid-row: span 2;
+			}
+
+			.large {
+			  grid-column: span 2;
+			  grid-row: span 2;
+			}
+
+			.box {
+				border-radius: 10px;
+				background: #F5F5F5;
+				position: relative;
+			}
+
+			.box:hover > .overlay {
+				top:0;left:0;
+			  	position: absolute;
+			  	width: 100%;
+			  	height: 100%;
+			  	background-color: rgba(224, 224, 224, .5);
+			  	border-radius: 10px;
+			}
+
+			.box-content {
+				padding: 30px 30px 30px 30px;
+				display: flex;
+				height: 100%
+			}
+
+			.play-button-container {
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			.music:hover > .overlay {
+				background-color: transparent;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			.play-button {
+				color: white;
+				visibility: hidden;
+			}
+
+			.music:hover .play-button {
+				visibility: visible;
+			}
+
+			.title {
+				font-size: 50px;
+				padding-bottom: 50px;
+				text-align: center;
+			}
+
+			.test-image {
+				background-size: contain;
+				background-image: url('https://www.rd.com/wp-content/uploads/2019/11/shutterstock_509582812-e1574100998595-scaled.jpg')
+			}
+
+			.music-logo {
+				position: absolute;
+				top: 10;
+				left: 10;
+				width: 35px;
+			}
+
+			.no-link-color {
+				color: inherit;
+				text-decoration: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				Reading Music
+			</div>
+			<div class="gallery">
+				<div class="box test-image music">
+					<div class="overlay">
+						<a href="https://open.spotify.com/playlist/4N8rVomP1kh843QuzNDljE" target="_blank" class="no-link-color">
+							<div class="box-content play-button-container">
+								<img class="music-logo" src="img/spotify-logo.png"/>
+								<i class="fa fa-play play-button fa-3x" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="box tall">
+					<div class="overlay">
+						<div class="box-content">
+							hi
+						</div>
+					</div>
+				</div>
+				<div class="box test-image music">
+					<div class="overlay">
+						<a href="https://www.youtube.com/watch?v=mIYzp5rcTvU&t=1228s" target="_blank" class="no-link-color">
+							<div class="box-content play-button-container">
+								<img class="music-logo" src="img/youtube-logo.png"/>
+								<i class="fa fa-play play-button fa-3x" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="box large">
+					<div class="overlay">
+						<div class="box-content">
+							hi
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="overlay">
+						<div class="box-content">
+							hi
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="overlay">
+						<div class="box-content">
+							hi
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
