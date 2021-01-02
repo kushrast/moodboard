@@ -13,6 +13,7 @@
 			}
 
 			.gallery {
+				padding: 20px 20px 20px 20px;
 			  display: grid;
 			  grid-gap: 15px;
 			  grid-template-columns: repeat(auto-fit, 300px);
@@ -91,7 +92,6 @@
 			.title {
 				font-weight: 800;
 				font-size: 50px;
-				padding-bottom: 50px;
 				text-align: left;
 			}
 
@@ -141,18 +141,116 @@
 				text-decoration: none;
 			}
 
+			.header {
+				background-color: black;
+				color: white;
+				padding: 50px 10% 70px 10%;
+				font-family: 'Raleway', sans-serif;
+				font-weight: 500;
+				background: #f2709c;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.header-main-row {
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+				align-content: center;
+			}
+
+			.pencil {
+				cursor: pointer;
+			}
+
+			.pencil:hover {
+				color: #E8E8E8;
+			}
+
+			.pencil:active {
+				color: #C0C0C0;
+			}
+
+			.swatches {
+				padding: 7px 10% 5px 10%;
+				display: flex;
+				justify-content: flex-start;
+			}
+
+			.swatch-box {
+				width: 40px;
+				height: 40px;
+				border-radius: 10px;
+				margin-left: 2px;
+				margin-right: 2px;
+				  cursor: pointer;
+			}
+
+			.swatch-grey {
+				background: #bdc3c7;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+
+			.swatch-grey:hover {
+				background: #bdc3c7;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.swatch-delhi {
+				background: #808080;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to top right, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.swatch-delhi:hover {
+				background: #808080;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to top left, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.swatch-yellow {
+				background: #fceabb;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom left, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.swatch-yellow:hover {
+				background: #fceabb;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			* {
+			  margin: 0;
+			  padding: 0;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="container">
-			<div class="header">
+		<div class="container header">
+			<div>
 				<div class="mood-board small-text">
 					MOOD BOARD
 				</div>
-				<div class="title">
-					Reading Music
+				<div class="header-main-row">
+					<div class="title">
+						Reading Music
+					</div>
+					<div>
+						<i class="fa fa-pencil fa-2x pencil" aria-hidden="true"></i>
+					</div>
 				</div>
 			</div>
+		</div>
+<!-- 		<div class="swatches">
+			<div class="swatch-box swatch-grey"></div>
+			<div class="swatch-box swatch-delhi"></div>
+			<div class="swatch-box swatch-yellow"></div>
+		</div> -->
+		<div class="container gallery-container">
 			<div class="gallery">
 				<div class="box test-image music">
 					<div class="overlay">
