@@ -1,0 +1,328 @@
+<html>
+	<head>
+		<title> Reading Music - Mood Board </title>
+		<link href="img/m.jpg" rel="shortcut icon" type="image/jpg">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style>
+			.container {
+				padding: 50px 10% 20px 10%;
+				font-family: 'Raleway', sans-serif;
+				font-weight: 500;
+			}
+
+			.gallery {
+				padding: 20px 20px 20px 20px;
+			  display: grid;
+			  grid-gap: 15px;
+			  grid-template-columns: repeat(auto-fit, 300px);
+			  grid-auto-rows: 300px;
+			  grid-auto-flow: dense;
+			}
+
+			.wide {
+			  grid-column: span 2;
+			}
+
+			.tall {
+			  grid-row: span 2;
+			}
+
+			.large {
+			  grid-column: span 2;
+			  grid-row: span 2;
+			}
+
+			.box {
+				border-radius: 10px;
+				background: #F5F5F5;
+				position: relative;
+			}
+
+			.seashell {
+				background: #FFF5EE;
+			}
+
+			.yellow {
+				background: #FBB117;
+				color: white;
+			}
+
+			.box:hover > .overlay {
+				top:0;left:0;
+			  	position: absolute;
+			  	width: 100%;
+			  	height: 100%;
+			  	background-color: rgba(224, 224, 224, .5);
+			  	border-radius: 10px;
+			}
+
+			.box-content {
+				padding: 30px 30px 30px 30px;
+				display: flex;
+				height: 100%
+			}
+
+			.play-button-container {
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			.music:hover > .overlay {
+				background-color: transparent;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			.play-button {
+				color: white;
+				visibility: hidden;
+			}
+
+			.music:hover .play-button {
+				visibility: visible;
+			}
+
+			.small-text {
+				font-weight: 400;
+			}
+
+			.title {
+				font-weight: 800;
+				font-size: 50px;
+				text-align: left;
+			}
+
+			.test-image {
+				background-size: cover;
+				background-image: url('https://www.rd.com/wp-content/uploads/2019/11/shutterstock_509582812-e1574100998595-scaled.jpg')
+			}
+
+			.test-image-2 {
+				background-size: cover;
+				background-image: url('https://miro.medium.com/max/10368/1*0tmBPKA1YGo82VNeMS3KhA.jpeg')
+			}
+
+			.test-image-3 {
+				opacity: 1.0;
+				cursor: initial;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url('https://www.mcmorrowreports.com/content/uploads/2018/03/mcmorrow-education-slider.jpg')
+			}
+
+			.test-image-3:hover .overlay {
+				background-color: transparent;
+			}
+
+			.test-image-4 {
+				opacity: 0.7;
+				cursor: initial;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url('https://www.caffesociety.co.uk/assets/recipe-images/latte-small.jpg')
+			}
+
+			.test-image-4:hover .overlay {
+				background-color: transparent;
+			}
+
+			.music-logo {
+				position: absolute;
+				top: 10;
+				left: 10;
+				width: 35px;
+			}
+
+			.no-link-color {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			.header {
+				background-color: black;
+				color: white;
+				padding: 50px 10% 70px 10%;
+				font-family: 'Raleway', sans-serif;
+				font-weight: 500;
+				background: linear-gradient(to right, #ff9472, #f2709c);
+			}
+
+			.header-main-row {
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+				align-content: center;
+			}
+
+			.pencil {
+				cursor: pointer;
+			}
+
+			.pencil:hover {
+				color: #E8E8E8;
+			}
+
+			.pencil:active {
+				color: #C0C0C0;
+			}
+
+			.swatches {
+				padding: 7px 10% 5px 10%;
+				display: flex;
+				justify-content: flex-start;
+			}
+
+			.swatch-box {
+				width: 40px;
+				height: 40px;
+				border-radius: 10px;
+				margin-left: 2px;
+				margin-right: 2px;
+				  cursor: pointer;
+			}
+
+			.swatch-grey {
+				background: #bdc3c7;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+
+			.swatch-grey:hover {
+				background: #bdc3c7;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.swatch-delhi {
+				background: #808080;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to top right, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.swatch-delhi:hover {
+				background: #808080;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to top left, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.swatch-yellow {
+				background: #fceabb;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom left, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.swatch-yellow:hover {
+				background: #fceabb;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			* {
+			  margin: 0;
+			  padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div>
+				<div class="small-text">
+					MOOD BOARD
+				</div>
+				<div class="header-main-row">
+					<div class="title">
+						Reading Music
+					</div>
+					<div>
+						<i class="fa fa-pencil fa-2x pencil" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container gallery-container">
+			<div class="gallery">
+				<div class="box test-image music">
+					<div class="overlay">
+						<a href="https://open.spotify.com/playlist/4N8rVomP1kh843QuzNDljE" target="_blank" class="no-link-color">
+							<div class="box-content play-button-container">
+								<img class="music-logo" src="img/spotify-logo.png"/>
+								<i class="fa fa-play play-button fa-3x" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="box tall">
+					<div class="overlay">
+						<div class="box-content">
+							<div>
+								<p>Calm relaxing music for reading.</p>
+								<br>
+								<br>
+								<br>
+								<p>Now Reading:	</p>
+								<br>	
+								<p> The American Crisis - Writers of the Atlantic </p>
+								<br>
+								<p> The Startup of You - Reid Hoffman, Ben Casanocha </p>
+
+								<br>
+								<br>
+								<br>
+								<p>Reading List:	</p>
+								<br>	
+								<p> The American Crisis - Writers of the Atlantic </p>
+								<br>
+								<p> The Startup of You - Reid Hoffman, Ben Casanocha </p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box test-image-2 music">
+					<div class="overlay">
+						<a href="https://www.youtube.com/watch?v=mIYzp5rcTvU&t=1228s" target="_blank" class="no-link-color">
+							<div class="box-content play-button-container">
+								<img class="music-logo" src="img/youtube-logo.png"/>
+								<i class="fa fa-play play-button fa-3x" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="box wide test-image-3">
+					<div class="overlay">
+						<div class="box-content">
+						</div>
+					</div>
+				</div>
+				<div class="box yellow">
+					<div class="overlay">
+						<div class="box-content"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="overlay">
+						<div class="box-content"></div>
+					</div>
+				</div>
+				<div class="box test-image-4">
+					<div class="overlay">
+						<div class="box-content">
+						</div>
+					</div>
+				</div>
+				<div class="box large seashell">
+					<div class="overlay">
+						<div class="box-content">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
